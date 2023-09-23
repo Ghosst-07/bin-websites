@@ -14,7 +14,7 @@ function Content() {
   return (
     <>
       <div className="flex flex-row justify-center items-center">
-        <p className="text-center m-20 text-xl md:text-4xl">
+        <p className="text-center text-black m-20 text-xl md:text-4xl">
           Immerse yourself in the captivating tale of our family&rsquo;s legacy,
           spanning back 800 years to the vibrant lands of Turkey. Step into a
           world where rugs transcend mere floor coverings and become exquisite
