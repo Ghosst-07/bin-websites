@@ -1,5 +1,5 @@
 import React from "react";
-import "./Sustainable.css";
+import "./sustainable.css";
 import { FaLeaf, FaRecycle, FaTree } from "react-icons/fa";
 import { Parallax } from "react-parallax";
 const Sustainable = () => {
