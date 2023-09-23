@@ -1,0 +1,67 @@
+.parallax-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.parallax-grid-item {
+  position: relative;
+  overflow: hidden;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.parallax-grid-image {
+  position: relative;
+  height: 0;
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease-out;
+}
+
+.parallax-grid-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  transition: opacity 0.5s ease-out;
+}
+
+.parallax-grid-item:hover .parallax-grid-image {
+  transform: scale(1.1);
+}
+
+.parallax-grid-item:hover .parallax-grid-image::before {
+  opacity: 0.8;
+}
+
+.parallax-grid-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease-out;
+}
+
+.parallax-grid-item:hover .parallax-grid-content {
+  transform: translateY(-50%);
+}
+
+.parallax-grid-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.parallax-grid-subtitle {
+  margin: 0;
+  font-size: 1.5rem;
+}

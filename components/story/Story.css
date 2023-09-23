@@ -1,0 +1,33 @@
+/* Story.css */
+.story {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+.story-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transform: translateZ(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.story-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem; /* Adjust the font size as needed */
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.story:hover .story-image {
+  transform: translateZ(-10px);
+}
