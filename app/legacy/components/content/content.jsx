@@ -34,7 +34,7 @@ function Content() {
           alt="img"
           width={800}
           height={300}
-          src="/slider(6).jpg"
+          src="/slider(6).JPG"
         />
         <p className=" font-bold text-justify text- m-5 text-xl md:text-3xl md:m-10">
           At the heart of our legacy lies the alchemy of carpet dyes. Harnessing
