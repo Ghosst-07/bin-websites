@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { FaAngleDown, FaAngleUp, FaBars } from "react-icons/fa";
-import { MdClose } from "react-icons/md";
+import { MdClose, MdLogoDev } from "react-icons/md";
 import Link from "next/link";
 import "./menu.css";
 import Image from "next/image";
@@ -10,14 +10,24 @@ function Menu() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [Scrollposition, setScrollposition] = useState();
 
-  const toggleMenu = () => {
+  const toggleMenu = async () => {
+    console.log(isOpen);
     if (!isOpen) {
+      setScrollposition(window.scrollY); // Get the current scroll position
+      console.log(Scrollposition);
       // Scroll to the top of the page
       window.scrollTo(0, 0);
+      console.log(isOpen);
+    } else {
+      window.scrollTo(0, Scrollposition + 750);
     }
+
     setIsOpen(!isOpen);
+
     document.body.style.overflow = isOpen ? "auto" : "hidden";
+    console.log(isOpen);
   };
 
   const toggleDropdown = () => {
