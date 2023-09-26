@@ -41,6 +41,7 @@ body {
 
 .swiper-button-next,
 .swiper-button-prev {
+  z-index: 50;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -59,7 +60,7 @@ body {
   display: block;
   width: 20px;
   height: 20px;
-  background-image: url("/public/next.svg");
+  background-image: url("/next.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
