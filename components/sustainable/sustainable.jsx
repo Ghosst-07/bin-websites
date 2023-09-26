@@ -5,9 +5,9 @@ import { Parallax } from "react-parallax";
 const Sustainable = () => {
   return (
     <div className="">
-      <Parallax bgImage="/earth.jpg">
+      <Parallax bgImage="/earth.jpg" strength={500} blur={5}>
         <div
-          className="flex flex-col justify-center items-center p-10 backdrop-blur-sm
+          className="flex flex-col justify-center items-center p-10 
          "
         >
           <h2
