@@ -13,7 +13,6 @@
   font-family: "Eyesome", sans-serif;
 }
 .animated-text {
-  font-size: 4rem;
   font-weight: bold;
   text-transform: uppercase;
   animation: animated-text 2s ease-in-out forwards;

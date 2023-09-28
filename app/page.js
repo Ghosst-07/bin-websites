@@ -28,10 +28,10 @@ function Home() {
       <div
         style={{
           position: "fixed",
-          top: mousePosition.y - 20,
-          left: mousePosition.x - 20,
-          width: "40px",
-          height: "40px",
+          top: mousePosition.y - 10,
+          left: mousePosition.x - 10,
+          width: "20px",
+          height: "20px",
           borderRadius: "50%",
           backgroundColor: "transparent",
           border: "2px solid #fff",
@@ -42,10 +42,7 @@ function Home() {
       <Slider />
       <Grid />
       <Welcome />
-      <Story
-        imageUrl="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
-        title="Test"
-      />
+      <Story />
       <QualityCards />
       <Sustainable />
     </>

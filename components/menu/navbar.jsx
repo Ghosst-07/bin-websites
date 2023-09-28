@@ -55,7 +55,7 @@ function Menu() {
     <>
       <nav
         className={`z-50 fixed top-0 flex w-full flex-wrap items-center justify-between py-10 lg:py-10 ${
-          isScrolled ? "bg-white" : "bg-transparent"
+          isScrolled ? "bg-gray-100" : "bg-transparent"
         }`}
       >
         <div className="flex w-full flex-wrap items-center justify-between px-3">
@@ -98,46 +98,25 @@ function Menu() {
                   Home
                 </Link>
               </li>
+
               <li className="text-6xl text-white  hover:text-white/80 pb-2">
                 <Link href="/legacy" onClick={toggleMenu}>
                   Legacy
                 </Link>
               </li>
+              <li className="text-6xl text-white  hover:text-white/80 pb-2">
+                <Link href="/legacy" onClick={toggleMenu}>
+                  Collections
+                </Link>
+              </li>
+
               <li className="text-6xl text-white">
-                <a href="#" onClick={toggleDropdown}>
-                  <div className="flex flex-row items-center  hover:text-white/80 pb-2">
-                    <span>Products</span>
-                    <FaAngleDown
-                      className={`dropdown-icon ${
-                        isDropdownOpen ? "hidden" : ""
-                      }`}
-                    />
-                    <FaAngleUp
-                      className={`dropdown-icon ${
-                        isDropdownOpen ? "" : "hidden"
-                      }`}
-                    />
-                  </div>
-                </a>
-                {isDropdownOpen && (
-                  <ul className="submenu-list">
-                    <li className="submenu-item">
-                      <Link href="/products/category1" onClick={toggleMenu}>
-                        Category 1
-                      </Link>
-                    </li>
-                    <li className="submenu-item">
-                      <Link href="/products/category2" onClick={toggleMenu}>
-                        Category 2
-                      </Link>
-                    </li>
-                    <li className="submenu-item text-white  hover:text-white/80">
-                      <Link href="/products/category3" onClick={toggleMenu}>
-                        Category 3
-                      </Link>
-                    </li>
-                  </ul>
-                )}
+                <a href="#" onClick={toggleDropdown}></a>
+              </li>
+              <li className="text-6xl text-white  hover:text-white/80 pb-2">
+                <Link href="/legacy" onClick={toggleMenu}>
+                  Stories
+                </Link>
               </li>
               <li className="text-6xl text-white hover:text-white/80">
                 <Link href="/contact" onClick={toggleMenu}>

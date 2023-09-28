@@ -5,9 +5,9 @@ import { Parallax } from "react-parallax";
 const Sustainable = () => {
   return (
     <div className="">
-      <Parallax bgImage="/earth.jpg" strength={500} blur={5}>
+      <Parallax bgImage="/earth.jpg" strength={500} blur={0}>
         <div
-          className="flex flex-col justify-center items-center p-10 
+          className="flex flex-col justify-center items-center p-10 backdrop-brightness-75
          "
         >
           <h2
@@ -22,7 +22,7 @@ const Sustainable = () => {
             creating a positive impact on the world.
           </p>
 
-          <div className="flex justify-around w-screen px-52 py-10">
+          <div className="flex justify-center w-screen px-52 py-5">
             <div className="icon" style={{ color: "white" }}>
               <FaRecycle />
             </div>

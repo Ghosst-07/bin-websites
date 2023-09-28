@@ -31,3 +31,7 @@
 .story:hover .story-image {
   transform: translateZ(-10px);
 }
+
+.storyh {
+  height: 500px;
+}
