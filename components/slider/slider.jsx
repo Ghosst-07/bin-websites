@@ -28,7 +28,7 @@ function Slider() {
       {/* SLIDER 1 */}
       <SwiperSlide>
         <Image
-          src="/slider(7).jpg"
+          src="/slider(7).JPG"
           width={1920}
           height={1080}
           alt="sliderImage"
