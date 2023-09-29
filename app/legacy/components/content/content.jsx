@@ -1,15 +1,6 @@
 import Image from "next/image";
 import React from "react";
 
-const RugDescription = () => {
-  // Animation for fading in the content
-  const fade = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    config: { duration: 1500 }, // Adjust animation duration as needed
-  });
-};
-
 function Content() {
   return (
     <>
@@ -30,13 +21,13 @@ function Content() {
 
       <div className="flex flex-col md:flex-row justify-start items-center">
         <Image
-          className="m-10 filter grayscale"
+          className="m-10"
           alt="img"
-          width={800}
+          width={600}
           height={300}
-          src="/slider(6).JPG"
+          src="/color-threds.jpg"
         />
-        <p className=" font-bold text-justify text- m-5 text-xl md:text-3xl md:m-10">
+        <p className="  text-justify text- m-5 text-xl md:text-3xl md:m-10">
           At the heart of our legacy lies the alchemy of carpet dyes. Harnessing
           the power of nature&rsquo;s pigments, we create a symphony of colors
           that dance harmoniously across our rugs. From earthy hues to vibrant
@@ -51,6 +42,31 @@ function Content() {
           grace your home, inviting the warmth and spirit of heritage into your
           everyday life.
         </p>
+      </div>
+
+      <div className="flex flex-col md:flex-row justify-start items-center">
+        <p className=" text-justify text- m-5 text-xl md:text-3xl md:m-10">
+          As you explore our collection, you embark on a journey through time,
+          where the beauty of the past seamlessly intertwines with the present.
+          Our rugs serve as whispers of history, bringing a touch of elegance
+          and sophistication to any space they grace.
+          <br />
+          <br />
+          We invite you to be a part of our family&apos;s heritage, to
+          experience the legacy that has been lovingly crafted for centuries.
+          From the loom to your home, discover the timeless artistry that has
+          captivated hearts worldwide. Welcome to a world where rugs are more
+          than just rugs; they are heirlooms of culture, beauty, and the
+          enduring spirit of our ancestors.
+        </p>
+
+        <Image
+          className="m-10"
+          alt="img"
+          width={600}
+          height={300}
+          src="/slider(6).jpg"
+        />
       </div>
     </>
   );

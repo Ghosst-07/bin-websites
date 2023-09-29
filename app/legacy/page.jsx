@@ -2,6 +2,7 @@ import React from "react";
 import Title from "./components/title/title";
 import Images from "./components/4images/images";
 import Content from "./components/content/content";
+import Footer from "@/components/footer/footer";
 
 const LegacyHome = () => {
   return (
@@ -17,6 +18,7 @@ const LegacyHome = () => {
       <Images />
 
       <Content />
+      <Footer />
     </>
   );
 };
