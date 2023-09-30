@@ -18,7 +18,6 @@ const LegacyHome = () => {
       <Images />
 
       <Content />
-      <Footer />
     </>
   );
 };

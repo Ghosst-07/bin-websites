@@ -26,33 +26,36 @@ const QualityCards = () => {
       title: "Sustainable",
       description: "Our products are made with sustainability in mind.",
     },
-
     {
       icon: <FaClock />,
       title: "On-Time Delivery",
-      description: "We ensure your orders are delivered on time.",
+      description:
+        "We ensure your orders are delivered on time and are always the best you can get.",
     },
     {
       icon: <FaThumbsUp />,
       title: "Customer Satisfaction",
-      description: "Your satisfaction is our top priority. and will always be",
+      description: "Your satisfaction is our top priority and will always be.",
     },
   ];
 
   return (
-    <div className="w-30">
-      <div className="flex p-10 gap-2 justify-center items-center">
-        {qualityData.map((card, index) => (
-          <div
-            className="bg-white  mt-5 pt-3 mb-5 h-40 flex flex-col justify-center items-center hover:shadow-lg"
-            key={index}
-          >
-            <div className="icon pt-5">{card.icon}</div>
-            <h3 className="text-center">{card.title}</h3>
-            <p className="text-center p-1 mb-5">{card.description}</p>
+    <div className="flex flex-wrap">
+      {qualityData.map((card, index) => (
+        <div
+          className="w-full pt-4 sm:w-1/2 lg:w-1/5 px-4 mb-4"
+          key={index}
+          // Use lg:w-1/5 for large screens, sm:w-1/2 for small screens
+        >
+          <div className="bg-white p-5 rounded-lg shadow-lg hover:shadow-xl h-full flex flex-col">
+            <div className="icon text-4xl mb-3">{card.icon}</div>
+            <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
+            <p className="text-sm text-gray-600 flex-grow">
+              {card.description}
+            </p>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };

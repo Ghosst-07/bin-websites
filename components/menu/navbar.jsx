@@ -105,7 +105,7 @@ function Menu() {
                 </Link>
               </li>
               <li className="text-6xl text-white  hover:text-white/80 pb-2">
-                <Link href="/legacy" onClick={toggleMenu}>
+                <Link href="/collections" onClick={toggleMenu}>
                   Collections
                 </Link>
               </li>
