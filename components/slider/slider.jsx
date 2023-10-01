@@ -28,7 +28,7 @@ function Slider() {
       {/* SLIDER 1 */}
       <SwiperSlide>
         <Image
-          src="/slider/slider7.jpg"
+          src="/slider/slider1.jpg"
           width={1920}
           height={1080}
           alt="slider1"
@@ -52,7 +52,7 @@ function Slider() {
 
       <SwiperSlide>
         <Image
-          src="/slider-all.jpg"
+          src="/slider/slider2.jpg"
           width={1920}
           height={1080}
           alt="sliderImage"
@@ -71,7 +71,7 @@ function Slider() {
 
       <SwiperSlide>
         <Image
-          src="/slider(3).jpg"
+          src="/slider/slider3.jpg"
           width={1920}
           height={1080}
           alt="sliderImage"
@@ -90,7 +90,7 @@ function Slider() {
       {/* SLIDER 3 */}
       <SwiperSlide>
         <Image
-          src="/threads_slider.jpg"
+          src="/slider/slider4.jpg"
           width={1920}
           height={1080}
           alt="sliderImage"
@@ -109,7 +109,7 @@ function Slider() {
       {/* SLIDER 4 */}
       <SwiperSlide>
         <Image
-          src="/slider(2).jpg"
+          src="/slider/slider5.jpg"
           width={1920}
           height={1080}
           alt="sliderImage"
