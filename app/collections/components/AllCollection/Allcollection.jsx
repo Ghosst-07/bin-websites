@@ -100,7 +100,7 @@ const Allcollection = () => {
                       key={index}
                       className="cursor-pointer mb-2 rounded-lg w-2/3 hover:bg-black/10 px-2 py-1"
                     >
-                      <p className=" ">{subcategory}</p>
+                      <p className=" text-red-50">{subcategory}</p>
                     </div>
                   ))}
                 </div>
