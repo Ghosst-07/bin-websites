@@ -1,10 +1,15 @@
+import Image from "next/image";
 import React from "react";
-import { Parallax } from "react-parallax";
+import { Parallax, Background } from "react-parallax";
 const imageDemo = "/story-slider.jpg";
 const Story = () => {
   return (
     <div className=" fex justify-center items-center ">
-      <Parallax bgImage={imageDemo} strength={1000}>
+      <Parallax
+        bgImage={imageDemo}
+        style={{ backgroundSize: "cover" }}
+        strength={1000}
+      >
         <div className="h-96 flex flex-col justify-center items-center">
           <div className="text-1xl text-center md: text-5xl drop-shadow-md ">
             Unveiling Untold Narratives:<br></br>
