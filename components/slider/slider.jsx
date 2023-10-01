@@ -8,8 +8,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
 
-const slider1image1 = "/slider(7).jpg";
-
 function Slider() {
   return (
     <Swiper
@@ -30,10 +28,10 @@ function Slider() {
       {/* SLIDER 1 */}
       <SwiperSlide>
         <Image
-          src={slider1image1}
+          src="/slider/slider7.jpg"
           width={1920}
           height={1080}
-          alt="sliderImage"
+          alt="slider1"
         />
         <div
           className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center
