@@ -29,8 +29,7 @@ const QualityCards = () => {
     {
       icon: <FaClock />,
       title: "On-Time Delivery",
-      description:
-        "We ensure your orders are delivered on time and are always the best you can get.",
+      description: "We ensure your orders are delivered on time.",
     },
     {
       icon: <FaThumbsUp />,

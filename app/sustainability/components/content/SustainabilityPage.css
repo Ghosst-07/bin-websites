@@ -1,0 +1,29 @@
+/* SustainabilityPage.css */
+
+.sustainability-page {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.space-background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #000, #03045e);
+}
+
+.earth-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease-out;
+}
+
+.earth-image {
+  width: 100%;
+  height: auto;
+  max-width: 600px; /* Adjust the maximum width as needed */
+}

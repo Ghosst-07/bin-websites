@@ -5,8 +5,8 @@ import { FaArrowRight } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="bg-black py-8">
-      <div className="container mx-auto px-4">
+    <footer className="bg-black py-8 ">
+      <div className="container mx-auto px-4 ">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/6 mb-4 md:mb-0">
             <h2 className="text-lg font-bold text-white mb-4">NEWSLETTER</h2>

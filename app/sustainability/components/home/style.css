@@ -1,0 +1,47 @@
+.morphing-text {
+  animation: morphText 3s infinite alternate;
+}
+
+@keyframes morphText {
+  0% {
+    color: #00ff00; /* Green */
+    transform: scale(1);
+  }
+  100% {
+    color: #ff0000; /* Red */
+    transform: scale(1.1);
+  }
+}
+
+.typing-animation {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 3px solid transparent; /* Add a blinking cursor */
+  white-space: nowrap;
+  margin: 0;
+  animation: typing 2s steps(40, end), blink-caret 0.75s infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #00ff00; /* Green */
+  }
+}
