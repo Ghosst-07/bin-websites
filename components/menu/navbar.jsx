@@ -118,6 +118,11 @@ function Menu() {
                   Stories
                 </Link>
               </li>
+              <li className="text-6xl text-white  hover:text-white/80 pb-2">
+                <Link href="/sustainability" onClick={toggleMenu}>
+                  Sustainability
+                </Link>
+              </li>
               <li className="text-6xl text-white hover:text-white/80">
                 <Link href="/contact" onClick={toggleMenu}>
                   Contact Us

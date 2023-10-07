@@ -7,44 +7,57 @@ const Allcollection = () => {
   const products = [
     {
       id: 1,
-      name: "Product 1",
-      imageSrc: "/slider-all.jpg",
-      cardImageSrc: "/color-threds.jpg", // Background image for the card
+      name: "Cotton Weaves",
+      imageSrc: "/DP/Cotton.jpg",
+
       description: "Description for Product 1",
-      subcategories: ["Subcategory A", "Subcategory B"],
+      subcategories: [
+        "Cotton Rug",
+        "Cotton Stripe",
+        "Cotton Reversible Rug",
+        "Cotton Chenille Rug",
+        "Cotton Chindi Rug",
+      ],
     },
     {
       id: 2,
-      name: "Product 2",
-      imageSrc: "/slider(1).jpg",
-      cardImageSrc: "/product-card-bg2.jpg", // Background image for the card
+      name: "Wool Wonders",
+      imageSrc: "/DP/Wool.jpg",
+
       description: "Description for Product 2",
-      subcategories: ["Subcategory C", "Subcategory D"],
+      subcategories: ["Wool Rug", "Wool Stripe Rug", "Wool Felt Rug"],
     },
     {
       id: 3,
-      name: "Product 3",
-      imageSrc: "/slider(3).jpg",
-      cardImageSrc: "/product-card-bg2.jpg", // Background image for the card
+      name: "Sustainable Comfort",
+      imageSrc: "/DP/Sus.jpg",
+
       description: "Description for Product 3",
-      subcategories: ["Subcategory E", "Subcategory F"],
+      subcategories: ["PET Rug", "PET Stripe Rug"],
     },
     {
       id: 4,
-      name: "Product 4",
-      imageSrc: "/slider(4).jpg",
+      name: "Nature's Medley",
+      imageSrc: "/DP/Jute.jpg",
       cardImageSrc: "/product-card-bg2.jpg", // Background image for the card
       description: "Description for Product 4",
-      subcategories: ["Subcategory G", "Subcategory H"],
+      subcategories: ["Jute Rug", "Jute Braided Rug"],
+    },
+    {
+      id: 5,
+      name: "Cushion & Beyond",
+      imageSrc: "/DP/Cushion.jpg",
+      description: "Description for Product 4",
+      subcategories: ["Cotton Cushion", "Wool Cushion", "PET Cushion"],
     },
 
     {
-      id: 5,
-      name: "Product 5",
-      imageSrc: "/slider(4).jpg",
-      cardImageSrc: "/product-card-bg2.jpg", // Background image for the card
+      id: 6,
+      name: "Bath Bliss",
+      imageSrc: "/DP/BathBliss.jpg",
+
       description: "Description for Product 4",
-      subcategories: ["Subcategory G", "Subcategory H"],
+      subcategories: ["Bathmat"],
     },
   ];
   const [hoveredProductId, setHoveredProductId] = useState(null);
@@ -52,17 +65,17 @@ const Allcollection = () => {
   return (
     <>
       <div className="h-20 w-screen bg-black"></div>
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center mt-5 mb-5">
         {products.map((product) => (
           <div
             key={product.id}
-            className={`relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 h-72 bg-slate-950 shadow-sm rounded-xl my-5 mx-1 transform transition-transform duration-300 flip-card ${
+            className={`relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 h-72 bg-slate-950 shadow-sm rounded-xl mt-2 mb-2 mx-1 transform transition-transform duration-300 flip-card ${
               hoveredProductId === product.id ? "hovered" : ""
             }`}
             onMouseEnter={() => setHoveredProductId(product.id)}
             onMouseLeave={() => setHoveredProductId(null)}
           >
-            <div className="flip-card-inner w-full h-72">
+            <div className="flip-card-inner border-none w-full h-72">
               <div
                 className={`flip-card-front w-full h-72 ${
                   hoveredProductId === product.id ? "flipped" : ""
@@ -71,36 +84,44 @@ const Allcollection = () => {
                 <Image
                   width={400}
                   height={400}
-                  className="rounded-xl w-full h-72 shadow-xl"
+                  className="rounded-xl w-full h-72 shadow-xl opacity-75"
                   inputMode="true"
                   objectFit="fill"
                   alt="image"
                   src={product.imageSrc}
                 />
                 <div className="absolute inset-0 flex flex-grow-0 justify-center items-center">
-                  <h1 className="text-white font-bold text-6xl">
+                  <h1 className="text-white font-bold text-3xl text-center">
                     {product.name}
                   </h1>
                 </div>
               </div>
               <div
-                className={`flip-card-back w-full h-72 bg-white text-black ${
+                className={`flip-card-back border-none w-full h-72 bg-white/5 text-black ${
                   hoveredProductId === product.id ? "flipped" : ""
-                }`}
+                } card-back`} // Apply the card-back class
               >
-                <div className="absolute inset-0 flex flex-col justify-center items-center bg-red-400 rounded-lg ">
-                  <h2 className="text-2xl font-semibold mb-4">
-                    Subcategories:
-                  </h2>
+                {/* Use the same image, flipped and slightly blurred */}
+                <Image
+                  width={400}
+                  height={400}
+                  className="rounded-xl w-full h-72 shadow-xl opacity-75 -scale-x-100 blur-sm"
+                  style={{}}
+                  inputMode="true"
+                  objectFit="fill"
+                  alt="image"
+                  src={product.imageSrc}
+                />
+                <div className="absolute inset-0 flex flex-col justify-center items-center bg-opacity-50 backdrop-blur-m backdrop-filter rounded-lg">
                   {product.subcategories.map((subcategory, index) => (
                     <div
                       onClick={() => {
                         console.log("sd");
                       }}
                       key={index}
-                      className="cursor-pointer mb-2 rounded-lg w-2/3 hover:bg-black/10 px-2 py-1"
+                      className="cursor-pointer mb-2 rounded-lg bg-black/10 w-2/3 hover:bg-black/25 px-2 py-1"
                     >
-                      <p className=" text-red-50">{subcategory}</p>
+                      <p className="text-red-50">- {subcategory}</p>
                     </div>
                   ))}
                 </div>
