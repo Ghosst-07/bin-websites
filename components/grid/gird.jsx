@@ -63,7 +63,7 @@ const SliderCarousel = () => {
         <div className="w-full swiper-wrapper">
           <Swiper
             slidesOffsetAfter={"0"}
-            speed={2000} // Lowered speed for quicker transition
+            speed={3500} // Lowered speed for quicker transition
             spaceBetween={10}
             centeredSlides={true}
             slidesPerView="auto"

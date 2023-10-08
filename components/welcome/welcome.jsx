@@ -15,14 +15,14 @@ function Welcome() {
           a dedication to perfection.
         </p>
       </div>
-      <div className="w-full md:w-1/2 py-6 text-center flex justify-center items-center">
-        <iframe
-          width="800"
-          height="400"
-          src="https://www.youtube.com/embed/COxJUmf1udI"
-          title="Meet The Sari Weavers Keeping A 16th Century Craft Alive | Still Standing | Business Insider"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        ></iframe>
+      <div className="w-full md:w-1/2 py-6 text-center flex justify-center items-center  ">
+        <video
+          className="drop-shadow-md"
+          src="/video/homevid.mp4"
+          loop
+          muted
+          autoPlay // Add the autoPlay attribute to auto-play the video
+        ></video>
       </div>
     </div>
   );
