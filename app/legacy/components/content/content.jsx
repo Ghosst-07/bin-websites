@@ -65,7 +65,7 @@ function Content() {
           alt="img"
           width={600}
           height={300}
-          src="/slider(6).jpg"
+          src="/slider/slider(6).jpg"
         />
       </div>
     </>
