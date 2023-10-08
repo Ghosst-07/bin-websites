@@ -8,7 +8,7 @@ const LegacyHome = () => {
   return (
     <>
       <video
-        src="https://cdn.shopify.com/videos/c/o/v/19eba4fe7cbe48b18031178b2e663363.mp4"
+        src="/video/legacy.mp4"
         muted
         autoPlay // Add the autoPlay attribute to auto-play the video
       ></video>
