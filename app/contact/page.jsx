@@ -7,7 +7,7 @@ const Contact = () => {
         {/* Left Section */}
         <div className="w-1/2 px-6">
           <h1 className="text-4xl font-bold">Contact Us</h1>
-          <p className="mt-2 mb-8">We'd love to hear from you!</p>
+          <p className="mt-2 mb-8">We&apos;d love to hear from you!</p>
           <div className="mb-4">
             <h2 className="text-2xl font-semibold mb-2">Contact Options</h2>
             <div className="mb-2">
