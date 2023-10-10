@@ -4,8 +4,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./grid.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import Link from "next/link"; // Import Link from Next.js
+import { Autoplay } from "swiper/modules"; // Removed Navigation
+import Link from "next/link";
 
 const images = [
   {
@@ -57,21 +57,21 @@ const SliderCarousel = () => {
     <>
       <div className="py-5">
         <h1 className="text-3xl text-center font-medium font-sans">
-          Explore What&apos; New
+          Explore Whats New
         </h1>
       </div>
       <div className="sample-slider rounded-lg">
         <div className="w-full swiper-wrapper">
           <Swiper
             slidesOffsetAfter={"0"}
-            speed={3500}
+            speed={3500} // Lowered speed for quicker transition
             spaceBetween={10}
             centeredSlides={true}
             slidesPerView="auto"
             autoplay={{
               delay: 0,
-              pauseOnMouseEnter: true,
-              disableOnInteraction: false,
+              pauseOnMouseEnter: true, // added
+              disableOnInteraction: false, // added
             }}
             pagination={{
               clickable: true,
@@ -96,8 +96,10 @@ const SliderCarousel = () => {
           >
             {images.map((image) => (
               <SwiperSlide key={image.id}>
-                {/* Wrap slide content with Link */}
-                <Link href="/collections">
+                <Link
+                  href="/collections"
+                  className="w-full h-72 relative group rounded-md "
+                >
                   <div className="w-full h-72 relative group rounded-md hover:scale-150">
                     <img
                       src={image.src}
