@@ -57,7 +57,7 @@ const SliderCarousel = () => {
     <>
       <div className="py-5">
         <h1 className="text-3xl text-center font-medium font-sans">
-          Explore What's New
+          Explore What&apos; New
         </h1>
       </div>
       <div className="sample-slider rounded-lg">
