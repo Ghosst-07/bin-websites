@@ -4,7 +4,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./grid.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules"; // Removed Navigation
+import { Autoplay } from "swiper/modules";
+import Link from "next/link"; // Import Link from Next.js
 
 const images = [
   {
@@ -56,21 +57,21 @@ const SliderCarousel = () => {
     <>
       <div className="py-5">
         <h1 className="text-3xl text-center font-medium font-sans">
-          Explore Whats New
+          Explore What's New
         </h1>
       </div>
       <div className="sample-slider rounded-lg">
         <div className="w-full swiper-wrapper">
           <Swiper
             slidesOffsetAfter={"0"}
-            speed={3500} // Lowered speed for quicker transition
+            speed={3500}
             spaceBetween={10}
             centeredSlides={true}
             slidesPerView="auto"
             autoplay={{
               delay: 0,
-              pauseOnMouseEnter: true, // added
-              disableOnInteraction: false, // added
+              pauseOnMouseEnter: true,
+              disableOnInteraction: false,
             }}
             pagination={{
               clickable: true,
@@ -95,17 +96,20 @@ const SliderCarousel = () => {
           >
             {images.map((image) => (
               <SwiperSlide key={image.id}>
-                <div className="w-full h-72 relative group rounded-md hover:scale-150">
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 flex flex-col justify-center items-center bg-black/40">
-                    <h2 className="text-2xl text-white">{image.title}</h2>
-                    <p className="text-sm text-white">{image.subtitle}</p>
+                {/* Wrap slide content with Link */}
+                <Link href="/collections">
+                  <div className="w-full h-72 relative group rounded-md hover:scale-150">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 flex flex-col justify-center items-center bg-black/40">
+                      <h2 className="text-2xl text-white">{image.title}</h2>
+                      <p className="text-sm text-white">{image.subtitle}</p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>

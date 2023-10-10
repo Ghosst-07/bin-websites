@@ -1,105 +1,81 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 
 const Contact = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const nextPage = () => {
-    if (currentPage < 3) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
-  const prevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
-
   return (
-    <div className="bg-black min-h-screen text-white font-bold">
-      <div className="container mx-auto py-20">
-        <h1 className="text-4xl mb-6 text-center">Contact Us</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left Column - Contact Information */}
-          <div
-            className={`mb-8 ${
-              currentPage === 1 ? "block" : "hidden"
-            } transition-opacity duration-500`}
-          >
-            <h2 className="text-2xl mb-4">Contact Information</h2>
-            <p className="text-gray-300 mb-2">
-              <i className="fas fa-map-marker-alt mr-2"></i>123 Main St, City,
-              Country
-            </p>
-            <p className="text-gray-300 mb-2">
-              <i className="fas fa-phone-alt mr-2"></i>+1 (123) 456-7890
-            </p>
-            <p className="text-gray-300 mb-2">
-              <i className="fas fa-envelope mr-2"></i>contact@example.com
-            </p>
+    <div className="pt-20 min-h-screen bg-black text-white">
+      <div className="container mx-auto py-10 flex">
+        {/* Left Section */}
+        <div className="w-1/2 px-6">
+          <h1 className="text-4xl font-bold">Contact Us</h1>
+          <p className="mt-2 mb-8">We'd love to hear from you!</p>
+          <div className="mb-4">
+            <h2 className="text-2xl font-semibold mb-2">Contact Options</h2>
+            <div className="mb-2">
+              <input type="radio" id="emailOption" name="contactOption" />
+              <label htmlFor="emailOption" className="ml-2">
+                Contact us via email
+              </label>
+            </div>
+            <div>
+              <input type="radio" id="addressOption" name="contactOption" />
+              <label htmlFor="addressOption" className="ml-2">
+                View our address
+              </label>
+            </div>
           </div>
-          {/* Right Column - Contact Form */}
-          <div
-            className={`bg-gray-800 p-6 rounded-lg shadow-md ${
-              currentPage === 2 ? "block" : "hidden"
-            } transition-opacity duration-500`}
-          >
-            <h2 className="text-2xl mb-4">Send Us a Message</h2>
+          <div>
+            <h2 className="text-2xl font-semibold">Contact Information</h2>
+            <div className="mb-2">
+              <p>Your Address Here</p>
+            </div>
+            <div>
+              <p>Your Phone Number Here</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Section */}
+        <div className="w-1/2 px-6">
+          <section className="bg-black bg-opacity-50 rounded-lg p-8">
             <form>
-              <div className="mb-4">
+              <div className="mb-6">
+                <label htmlFor="name" className="block mb-2 text-white">
+                  Your Name
+                </label>
                 <input
                   type="text"
-                  className="w-full py-2 px-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring focus:border-blue-500"
-                  placeholder="Your Name"
-                  required
+                  id="name"
+                  className="w-full px-4 py-3 bg-gray-800 rounded-lg text-white focus:outline-none"
                 />
               </div>
-              <div className="mb-4">
+              <div className="mb-6">
+                <label htmlFor="email" className="block mb-2 text-white">
+                  Your Email
+                </label>
                 <input
                   type="email"
-                  className="w-full py-2 px-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring focus:border-blue-500"
-                  placeholder="Your Email"
-                  required
+                  id="email"
+                  className="w-full px-4 py-3 bg-gray-800 rounded-lg text-white focus:outline-none"
                 />
               </div>
-              <div className="mb-4">
+              <div className="mb-6">
+                <label htmlFor="message" className="block mb-2 text-white">
+                  Your Message
+                </label>
                 <textarea
+                  id="message"
                   rows="4"
-                  className="w-full py-2 px-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring focus:border-blue-500"
-                  placeholder="Your Message"
-                  required
+                  className="w-full px-4 py-3 bg-gray-800 rounded-lg text-white focus:outline-none"
                 ></textarea>
               </div>
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300"
-                >
-                  Send Message
-                </button>
-              </div>
+              <button
+                type="submit"
+                className="block w-full px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 hover:bg-green-600 text-lg font-semibold rounded-lg focus:outline-none"
+              >
+                Send Message
+              </button>
             </form>
-          </div>
-          {/* Navigation Buttons */}
-          <div className="col-span-2 text-center mt-6">
-            <button
-              onClick={prevPage}
-              className={`${
-                currentPage === 1 ? "hidden" : "block"
-              } bg-blue-500 text-white py-2 px-4 rounded-lg mr-4 hover:bg-blue-600 transition duration-300`}
-            >
-              Previous
-            </button>
-            <button
-              onClick={nextPage}
-              className={`${
-                currentPage === 2 ? "hidden" : "block"
-              } bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300`}
-            >
-              Next
-            </button>
-          </div>
+          </section>
         </div>
       </div>
     </div>

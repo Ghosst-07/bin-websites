@@ -10,6 +10,7 @@ const LegacyHome = () => {
       <video
         src="/video/legacy.mp4"
         muted
+        loop
         autoPlay // Add the autoPlay attribute to auto-play the video
       ></video>
 

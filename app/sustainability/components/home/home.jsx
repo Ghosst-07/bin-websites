@@ -40,7 +40,7 @@ function SustainabilityPage() {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative overflow-hidden">
         {/* First Section */}
         <div
           className="bg-cover bg-center h-screen text-white relative overflow-hidden"
@@ -71,11 +71,11 @@ function SustainabilityPage() {
       <div className="bg-gray-100 py-16">
         <div className="container mx-auto">
           <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-8">
+            <h2 className="text-3xl px-2 sm:text-4xl font-bold mb-8">
               Our Sustainable Practices
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 px-2 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {cardsData.map((card, index) => (
               <div
                 key={index}
@@ -88,46 +88,6 @@ function SustainabilityPage() {
                 <p className="text-white">{card.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Third Section */}
-      <div className="bg-cover bg-center h-screen text-white relative">
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <h2 className="text-4xl sm:text-6xl font-bold mb-8">
-              Our Impact on Sustainability
-            </h2>
-            <p className="text-lg sm:text-xl mb-6">
-              Take a look at our sustainability achievements:
-            </p>
-            {/* Graphical Representation */}
-            <div className="flex justify-center">
-              <div className="w-2/3">
-                {/* Replace with your sustainability data */}
-                <Image
-                  width={600}
-                  height={300}
-                  src=""
-                  alt="Sustainability Data"
-                />
-              </div>
-            </div>
-            {/* Additional Content */}
-            <div className="mt-8">
-              <p className="text-lg sm:text-xl mb-4">
-                Our commitment to sustainability has led to significant
-                improvements:
-              </p>
-              <ul className="list-disc ml-6">
-                <li>Reduced carbon emissions by 30%.</li>
-                <li>100% renewable energy usage.</li>
-                <li>Zero waste production.</li>
-                <li>10,000 trees planted.</li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>

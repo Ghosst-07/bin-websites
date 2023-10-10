@@ -60,16 +60,18 @@ function Menu() {
       >
         <div className="flex w-full flex-wrap items-center justify-between px-3">
           <div className="ml-2">
-            <Image
-              style={{
-                filter: isScrolled ? "invert(1)" : "invert(0)",
-              }}
-              className="menu-logo"
-              src="/logo-light.png"
-              width={200}
-              height={100}
-              alt="logo"
-            />
+            <Link href="/">
+              <Image
+                style={{
+                  filter: isScrolled ? "invert(1)" : "invert(0)",
+                }}
+                className="menu-logo"
+                src="/logo-light.png"
+                width={200}
+                height={100}
+                alt="logo"
+              />
+            </Link>
 
             <button
               className={`menu-button ${
@@ -114,10 +116,11 @@ function Menu() {
                 <a href="#" onClick={toggleDropdown}></a>
               </li>
               <li className="text-6xl text-white  hover:text-white/80 pb-2">
-                <Link href="/legacy" onClick={toggleMenu}>
+                <Link href="/#" onClick={toggleMenu}>
                   Stories
                 </Link>
               </li>
+
               <li className="text-6xl text-white  hover:text-white/80 pb-2">
                 <Link href="/sustainability" onClick={toggleMenu}>
                   Sustainability
