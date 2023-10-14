@@ -15,7 +15,11 @@ const Contact = () => {
           <div>
             <h2 className="text-2xl font-semibold">Contact Information</h2>
             <div className="mb-2">
-              <p>Your Address Here</p>
+              <p>SAKET VIHAR, KHURRAM NAGAR, LUCKNOW.
+D
+DFT DOFl
+FT DOFf
+LUCKNOW, UTTAR PRADESH, 226022 F</p>
             </div>
             <div>
               <p>Your Phone Number Here</p>
