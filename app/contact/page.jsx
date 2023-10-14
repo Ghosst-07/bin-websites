@@ -9,13 +9,7 @@ const Contact = () => {
           <h1 className="text-4xl font-bold">Contact Us</h1>
           <p className="mt-2 mb-8">We&apos;d love to hear from you!</p>
           <div className="mb-4">
-            <h2 className="text-2xl font-semibold mb-2">Contact Options</h2>
-            <div className="mb-2">
-              <input type="radio" id="emailOption" name="contactOption" />
-              <label htmlFor="emailOption" className="ml-2">
-                Contact us via email
-              </label>
-            </div>
+      
             <div>
               <input type="radio" id="addressOption" name="contactOption" />
               <label htmlFor="addressOption" className="ml-2">
