@@ -5,7 +5,7 @@ const Login = ({ onClose, onRegister }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 ">
       <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0.75)] backdrop-blur-md"></div>
-      <div className="  w-full max-w-md p-4 rounded-lg z-10 absolute bg-white dark:bg-black shadow-2xl">
+      <div className="  w-full max-w-md p-4 rounded-lg z-10 absolute bg-black shadow-2xl">
         <button
           className="close-btn absolute top-2 right-2 text-black dark:text-white text-2xl"
           onClick={onClose}
